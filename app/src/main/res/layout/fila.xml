@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/filaCompleta"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -8,19 +9,22 @@
 
     <ImageView
         android:id="@+id/imgAnimal"
+        android:layout_gravity="center_vertical"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_margin="5px" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvAnimal"
             android:text="Mi Fila"
-            android:layout_gravity="center_vertical"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:textSize="21sp"
             android:layout_height="wrap_content" />
@@ -28,10 +32,20 @@
         <TextView
             android:id="@+id/tvDescripcion"
             android:text="Mi Descripcion"
+            android:layout_marginLeft="20px"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:textSize="16sp"
             android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/color_azul"
+            android:id="@+id/imgColor"
+            android:layout_margin="5dp"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 </LinearLayout>
