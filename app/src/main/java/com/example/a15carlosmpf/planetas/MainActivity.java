@@ -15,12 +15,14 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
     private MyArrayAdapter adapter;
     private ListView lvAnimales;
     private String[] listaAnimales;
+    private ArrayList<Animal> animales;
     private Integer[] listaIdFotos;
     private String[] listaDescripciones;
 
@@ -44,15 +46,20 @@ public class MainActivity extends AppCompatActivity {
         listaIdFotos[6]=R.drawable.perro;
         listaIdFotos[7]=R.drawable.vaca;
 
+        animales=new ArrayList<>();
+        for(int i=0;i<listaAnimales.length;i++){
+            animales.add(new Animal(listaAnimales[i],listaDescripciones[i],listaIdFotos[i]));
+        }
 
 
-        adapter= new MyArrayAdapter(MainActivity.this,listaAnimales,listaDescripciones, listaIdFotos);
+
+        adapter= new MyArrayAdapter(MainActivity.this,animales);
         lvAnimales.setAdapter(adapter);
 
         lvAnimales.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
-                Toast.makeText(MainActivity.this, "Elección: " + parent.getItemAtPosition(i), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Elección: " + ((Animal)parent.getItemAtPosition(i)).getNombre(), Toast.LENGTH_SHORT).show();
             }
         });
     }
