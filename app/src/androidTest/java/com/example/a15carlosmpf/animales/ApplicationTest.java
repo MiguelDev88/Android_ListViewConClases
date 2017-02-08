@@ -1,4 +1,4 @@
-package com.example.a15carlosmpf.planetas;
+package com.example.a15carlosmpf.animales;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
