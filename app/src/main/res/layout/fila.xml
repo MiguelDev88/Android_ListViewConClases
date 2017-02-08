@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/imgAnimal"
         android:layout_gravity="center_vertical"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_margin="5px" />
 
     <LinearLayout
